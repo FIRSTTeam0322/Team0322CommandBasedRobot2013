@@ -9,7 +9,7 @@ ShooterTurret::ShooterTurret() : Subsystem("ShooterTurret") {
 void ShooterTurret::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
-	SetDefaultCommand(new spinTurret());
+	SetDefaultCommand(new SpinTurret());
 }
 
 
