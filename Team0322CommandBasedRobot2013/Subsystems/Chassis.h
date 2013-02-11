@@ -14,7 +14,7 @@ private:
 	// for methods that implement subsystem capabilities
 	RobotDrive *robotDrive;
 	Victor *frontLeftMotor, *frontRightMotor, *rearLeftMotor, *rearRightMotor;
-	DigitalOutput *leftFrontBrake, *leftRearBrake, *rightFrontBrake, *rightRearBrake;	
+	DigitalOutput *leftFrontBrake, *leftRearBrake, *rightFrontBrake, *rightRearBrake;
 public:
 	Chassis();
 	void InitDefaultCommand();
