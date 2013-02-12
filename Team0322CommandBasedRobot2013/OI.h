@@ -12,6 +12,8 @@ private:
 	
 	JoystickButton *brake, *precisionDriveButton;
 	
+	JoystickButton *discLoader, *discShooter, *shooterReverse;
+	
 public:
 	OI();
 	Joystick* getDriveStickLeft();

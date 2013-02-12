@@ -1,11 +1,14 @@
 #include "OI.h"
 #include "Commands/BrakeControl.h"
 #include "Commands/PrecisionDrive.h"
+#include "Commands/LoadDisc.h"
+#include "Commands/ShootDisc.h"
+#include "Commands/ReverseShooter.h"
 
 OI::OI() {
 	// Process operator interface input here.
 	
-	// Create the two Joystick objects
+	// Create the three Joystick objects
 	driveStickLeft = new Joystick(1);
 	driveStickRight = new Joystick(2);
 	manipulatorStick = new Joystick(3, NUMAXIS, NUMBUTTONS);
@@ -17,6 +20,16 @@ OI::OI() {
 	// Create the Precision Drive System controls
 	precisionDriveButton = new JoystickButton(driveStickRight, 1);
 	precisionDriveButton->WhileHeld(new PrecisionDrive());
+	
+	// Create the Shooter System controls
+	discLoader = new JoystickButton(manipulatorStick, 1);
+	discLoader->WhileHeld(new LoadDisc());
+	
+	discShooter = new JoystickButton(manipulatorStick, 2);
+	discShooter->WhileHeld(new ShootDisc());
+	
+	shooterReverse = new JoystickButton(manipulatorStick, 3);
+	shooterReverse->WhileHeld(new ReverseShooter());
 }
 
 Joystick* OI::getDriveStickLeft() {
