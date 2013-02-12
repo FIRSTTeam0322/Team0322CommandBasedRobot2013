@@ -14,6 +14,7 @@ private:
 	Command* driverStationLCDOutput;
 	Command* clearLCD;
 	Command* startCompressor;
+	LiveWindow *lw;
 	
 	virtual void RobotInit() {
 		CommandBase::init();
@@ -22,6 +23,7 @@ private:
 		driverStationLCDOutput = new DriverStationLCDOutput();
 		clearLCD = new ClearLCD();
 		startCompressor = new StartCompressor();
+		lw = LiveWindow::GetInstance();
 		
 		resetSensors->SetRunWhenDisabled(true);
 		driverStationLCDOutput->SetRunWhenDisabled(true);
@@ -66,6 +68,10 @@ private:
 	virtual void TeleopPeriodic() {
 		driverStationLCDOutput->Run();
 		Scheduler::GetInstance()->Run();
+	}
+	
+	virtual void TestPeriodic() {
+		lw->Run();
 	}
 };
 
