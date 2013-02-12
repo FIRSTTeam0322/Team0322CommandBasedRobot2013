@@ -16,8 +16,8 @@ private:
 public:
 	PneumaticControlSystem();
 	void InitDefaultCommand();
-	void StartCompressor();
-	void StopCompressor();
+	void startCompressor();
+	void stopCompressor();
 };
 
 #endif
