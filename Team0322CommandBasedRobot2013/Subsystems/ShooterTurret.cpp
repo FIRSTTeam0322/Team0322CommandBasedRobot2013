@@ -1,5 +1,6 @@
 #include "ShooterTurret.h"
 #include "../Robotmap.h"
+#include "../Commands/SpinTurret.h"
 
 ShooterTurret::ShooterTurret() : Subsystem("ShooterTurret") {
 	leftTurretMotor = new Victor(DIGITAL_MODULE_LEFT,3);
@@ -17,6 +18,6 @@ void ShooterTurret::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void ShooterTurret::spinTurret(Joystick *manipulatorStick) {
-	leftTurretMotor->Set(manipulatorStick->GetAxis(1));
-	rightTurretMotor->Set(-(manipulatorStick->GetAxis(1)));
+	leftTurretMotor->Set(manipulatorStick->GetRawAxis(1));
+	rightTurretMotor->Set(-(manipulatorStick->GetRawAxis(1)));
 }
