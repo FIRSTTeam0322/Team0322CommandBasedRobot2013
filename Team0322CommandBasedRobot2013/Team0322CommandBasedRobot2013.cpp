@@ -5,6 +5,7 @@
 #include "Commands/DriverStationLCDOutput.h"
 #include "Commands/ClearLCD.h"
 #include "Commands/AutonSelector.h"
+#include "Commands/StartCompressor.h"
 
 class Team0322CommandBasedRobot2013 : public IterativeRobot {
 private:
@@ -12,6 +13,7 @@ private:
 	Command* resetSensors;
 	Command* driverStationLCDOutput;
 	Command* clearLCD;
+	Command* startCompressor;
 	
 	virtual void RobotInit() {
 		CommandBase::init();
@@ -19,15 +21,18 @@ private:
 		resetSensors = new ResetSensors();
 		driverStationLCDOutput = new DriverStationLCDOutput();
 		clearLCD = new ClearLCD();
+		startCompressor = new StartCompressor();
 		
 		resetSensors->SetRunWhenDisabled(true);
 		driverStationLCDOutput->SetRunWhenDisabled(true);
 		clearLCD->SetRunWhenDisabled(true);
+		startCompressor->SetRunWhenDisabled(true);
 	}
 	
 	virtual void DisabledInit() {
 		clearLCD->Start();
 		resetSensors->Start();
+		startCompressor->Start();
 	}
 	
 	virtual void DisabledPeriodic() {
@@ -40,6 +45,7 @@ private:
 		autonomousCommand->Start();
 		clearLCD->Start();
 		resetSensors->Cancel();
+		startCompressor->Start();
 	}
 	
 	virtual void AutonomousPeriodic() {
@@ -54,6 +60,7 @@ private:
 		// this line or comment it out.
 		autonomousCommand->Cancel();
 		resetSensors->Cancel();
+		startCompressor->Start();
 	}
 	
 	virtual void TeleopPeriodic() {
