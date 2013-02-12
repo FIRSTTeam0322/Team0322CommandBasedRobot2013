@@ -15,6 +15,7 @@ Chassis* CommandBase::chassis = NULL;
 Shooter* CommandBase::shooter = NULL;
 ShooterTurret* CommandBase::shooterTurret = NULL;
 PneumaticControlSystem* CommandBase::pneumaticControlSystem = NULL;
+Vision* CommandBase::vision = NULL;
 OI* CommandBase::oi = NULL;
 
 void CommandBase::init() {
@@ -27,5 +28,6 @@ void CommandBase::init() {
 	shooter = new Shooter();
 	shooterTurret = new ShooterTurret();
 	pneumaticControlSystem = new PneumaticControlSystem();
+	vision = new Vision();
 	oi = new OI();
 }

@@ -9,6 +9,7 @@
 #include "Subsystems/Shooter.h"
 #include "Subsystems/ShooterTurret.h"
 #include "Subsystems/PneumaticControlSystem.h"
+#include "Subsystems/Vision.h"
 #include "OI.h"
 
 /**
@@ -29,6 +30,7 @@ public:
 	static Shooter *shooter;
 	static ShooterTurret *shooterTurret;
 	static PneumaticControlSystem *pneumaticControlSystem;
+	static Vision *vision;
 	static OI *oi;
 };
 
