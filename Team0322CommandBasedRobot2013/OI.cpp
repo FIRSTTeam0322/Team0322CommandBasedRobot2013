@@ -13,15 +13,15 @@ OI::OI() {
 	driveStickRight = new Joystick(2);
 	manipulatorStick = new Joystick(3, NUMAXIS, NUMBUTTONS);
 	
-	// Create the Brake System controls
+	// Create the Brake SubSystem controls
 	brake = new JoystickButton(driveStickLeft, 1);
 	brake->WhileHeld(new BrakeControl());
 	
-	// Create the Precision Drive System controls
+	// Create the Precision Drive SubSystem controls
 	precisionDriveButton = new JoystickButton(driveStickRight, 1);
 	precisionDriveButton->WhileHeld(new PrecisionDrive());
 	
-	// Create the Shooter System controls
+	// Create the Shooter SubSystem controls
 	discLoader = new JoystickButton(manipulatorStick, 1);
 	discLoader->WhileHeld(new LoadDisc());
 	
