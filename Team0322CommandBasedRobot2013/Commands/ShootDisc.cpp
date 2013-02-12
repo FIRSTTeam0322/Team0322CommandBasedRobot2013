@@ -3,7 +3,7 @@
 ShootDisc::ShootDisc() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
-	requires(shooter);
+	Requires(shooter);
 }
 
 // Called just before this Command runs the first time

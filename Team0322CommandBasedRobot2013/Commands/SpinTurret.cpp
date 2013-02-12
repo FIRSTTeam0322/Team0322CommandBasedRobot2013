@@ -3,7 +3,7 @@
 SpinTurret::SpinTurret() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
-	requires(shooterTurret);
+	Requires(shooterTurret);
 }
 
 // Called just before this Command runs the first time
