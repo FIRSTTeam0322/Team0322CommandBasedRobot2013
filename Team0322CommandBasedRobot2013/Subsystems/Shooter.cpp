@@ -25,8 +25,8 @@ void Shooter::resetLoader() {
 }
 
 void Shooter::shootDisc() {
-	frontWheelMotor->Set(1.0);
-	rearWheelMotor->Set(1.0);
+	frontWheelMotor->Set(-1.0);
+	rearWheelMotor->Set(-1.0);
 }
 
 void Shooter::stopShooter() {
@@ -35,6 +35,6 @@ void Shooter::stopShooter() {
 }
 
 void Shooter::reverseShooter() {
-	frontWheelMotor->Set(-1.0);
-	rearWheelMotor->Set(-1.0);
+	frontWheelMotor->Set(1.0);
+	rearWheelMotor->Set(1.0);
 }
