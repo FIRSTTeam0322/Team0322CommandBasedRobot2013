@@ -1,5 +1,5 @@
-#ifndef STOPCOMPRESSOR_H
-#define STOPCOMPRESSOR_H
+#ifndef STOP_COMPRESSOR_H
+#define STOP_COMPRESSOR_H
 
 #include "../CommandBase.h"
 

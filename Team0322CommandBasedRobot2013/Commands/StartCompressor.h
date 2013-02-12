@@ -1,5 +1,5 @@
-#ifndef STARTCOMPRESSOR_H
-#define STARTCOMPRESSOR_H
+#ifndef START_COMPRESSOR_H
+#define START_COMPRESSOR_H
 
 #include "../CommandBase.h"
 
