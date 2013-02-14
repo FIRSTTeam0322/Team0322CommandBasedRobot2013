@@ -2,7 +2,7 @@
 #include "Commands/Command.h"
 #include "CommandBase.h"
 #include "Commands/ResetSensors.h"
-#include "Commands/DriverStationLCDOutput.h"
+#include "Commands/DriversStationUpdater.h"
 #include "Commands/ClearLCD.h"
 #include "Commands/AutonSelector.h"
 #include "Commands/StartCompressor.h"
@@ -11,7 +11,7 @@ class Team0322CommandBasedRobot2013 : public IterativeRobot {
 private:
 	Command* autonomousCommand;
 	Command* resetSensors;
-	Command* driverStationLCDOutput;
+	Command* driversStationUpdater;
 	Command* clearLCD;
 	Command* startCompressor;
 	LiveWindow *lw;
@@ -20,13 +20,13 @@ private:
 		CommandBase::init();
 		autonomousCommand = new AutonSelector();
 		resetSensors = new ResetSensors();
-		driverStationLCDOutput = new DriverStationLCDOutput();
+		driversStationUpdater = new DriversStationUpdater();
 		clearLCD = new ClearLCD();
 		startCompressor = new StartCompressor();
 		lw = LiveWindow::GetInstance();
 		
 		resetSensors->SetRunWhenDisabled(true);
-		driverStationLCDOutput->SetRunWhenDisabled(true);
+		driversStationUpdater->SetRunWhenDisabled(true);
 		clearLCD->SetRunWhenDisabled(true);
 		startCompressor->SetRunWhenDisabled(true);
 	}
@@ -39,7 +39,7 @@ private:
 	
 	virtual void DisabledPeriodic() {
 		resetSensors->Cancel();
-		driverStationLCDOutput->Run();
+		driversStationUpdater->Run();
 		Scheduler::GetInstance()->Run();
 	}
 	
@@ -51,7 +51,7 @@ private:
 	}
 	
 	virtual void AutonomousPeriodic() {
-		driverStationLCDOutput->Run();
+		driversStationUpdater->Run();
 		Scheduler::GetInstance()->Run();
 	}
 	
@@ -66,7 +66,7 @@ private:
 	}
 	
 	virtual void TeleopPeriodic() {
-		driverStationLCDOutput->Run();
+		driversStationUpdater->Run();
 		Scheduler::GetInstance()->Run();
 	}
 	
