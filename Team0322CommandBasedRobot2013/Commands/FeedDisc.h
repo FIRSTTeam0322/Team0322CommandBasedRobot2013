@@ -1,5 +1,5 @@
-#ifndef FEEDDISC_H
-#define FEEDDISC_H
+#ifndef FEED_DISC_H
+#define FEED_DISC_H
 
 #include "../CommandBase.h"
 

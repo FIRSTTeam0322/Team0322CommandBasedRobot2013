@@ -1,5 +1,5 @@
-#ifndef STOPFEED_H
-#define STOPFEED_H
+#ifndef STOP_FEED_H
+#define STOP_FEED_H
 
 #include "../CommandBase.h"
 
