@@ -6,6 +6,7 @@
 #include "Subsystems/ChassisSensors.h"
 #include "Subsystems/AutonomusModeSwitches.h"
 #include "Subsystems/Chassis.h"
+#include "Subsystems/Feeder.h"
 #include "Subsystems/Shooter.h"
 #include "Subsystems/ShooterTurret.h"
 #include "Subsystems/PneumaticControlSystem.h"
@@ -27,6 +28,7 @@ public:
 	static ChassisSensors *chassisSensors;
 	static AutonomusModeSwitches *autonomusModeSwitches;
 	static Chassis *chassis;
+	static Feeder *feeder;
 	static Shooter *shooter;
 	static ShooterTurret *shooterTurret;
 	static PneumaticControlSystem *pneumaticControlSystem;

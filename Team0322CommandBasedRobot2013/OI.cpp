@@ -4,6 +4,7 @@
 #include "Commands/LoadDisc.h"
 #include "Commands/ShootDisc.h"
 #include "Commands/ReverseShooter.h"
+#include "Commands/FeedDisc.h"
 
 OI::OI() {
 	// Process operator interface input here.
@@ -21,14 +22,18 @@ OI::OI() {
 	precisionDriveButton = new JoystickButton(driveStickRight, 1);
 	precisionDriveButton->WhileHeld(new PrecisionDrive());
 	
+	// Create the Feeder SybSystem controls
+	runFeeder = new JoystickButton(manipulatorStick, 1);
+	runFeeder->WhileHeld(new FeedDisc());
+	
 	// Create the Shooter SubSystem controls
-	discLoader = new JoystickButton(manipulatorStick, 1);
+	discLoader = new JoystickButton(manipulatorStick, 2);
 	discLoader->WhileHeld(new LoadDisc());
 	
-	discShooter = new JoystickButton(manipulatorStick, 2);
+	discShooter = new JoystickButton(manipulatorStick, 3);
 	discShooter->WhileHeld(new ShootDisc());
 	
-	shooterReverse = new JoystickButton(manipulatorStick, 3);
+	shooterReverse = new JoystickButton(manipulatorStick, 4);
 	shooterReverse->WhileHeld(new ReverseShooter());
 }
 

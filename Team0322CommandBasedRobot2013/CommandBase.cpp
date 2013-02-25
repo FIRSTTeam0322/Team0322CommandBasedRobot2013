@@ -12,6 +12,7 @@ DriverStationLCDSystem* CommandBase::driverStationLCDSystem = NULL;
 ChassisSensors* CommandBase::chassisSensors = NULL;
 AutonomusModeSwitches* CommandBase::autonomusModeSwitches = NULL;
 Chassis* CommandBase::chassis = NULL;
+Feeder* CommandBase::feeder = NULL;
 Shooter* CommandBase::shooter = NULL;
 ShooterTurret* CommandBase::shooterTurret = NULL;
 PneumaticControlSystem* CommandBase::pneumaticControlSystem = NULL;
@@ -25,6 +26,7 @@ void CommandBase::init() {
 	chassisSensors = new ChassisSensors();
 	autonomusModeSwitches = new AutonomusModeSwitches();
 	chassis = new Chassis();
+	feeder = new Feeder();
 	shooter = new Shooter();
 	shooterTurret = new ShooterTurret();
 	pneumaticControlSystem = new PneumaticControlSystem();

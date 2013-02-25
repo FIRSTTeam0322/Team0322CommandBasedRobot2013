@@ -12,7 +12,7 @@ private:
 	
 	JoystickButton *brake, *precisionDriveButton;
 	
-	JoystickButton *discLoader, *discShooter, *shooterReverse;
+	JoystickButton *runFeeder, *discLoader, *discShooter, *shooterReverse;
 	
 public:
 	OI();
