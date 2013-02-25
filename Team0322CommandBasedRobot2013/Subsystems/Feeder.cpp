@@ -3,13 +3,11 @@
 
 Feeder::Feeder() : Subsystem("Feeder") {
 	discFeeder = new Victor(DIGITAL_MODULE_LEFT,3);
-	
 }
     
 void Feeder::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	//SetDefaultCommand(new MySpecialCommand());
-	SetDefaultCommand(new StopFeed());
 }
 
 
