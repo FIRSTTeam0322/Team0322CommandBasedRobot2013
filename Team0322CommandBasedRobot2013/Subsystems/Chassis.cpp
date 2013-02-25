@@ -41,7 +41,8 @@ void Chassis::autoDriveSystem(float left, float right) {
 }
 
 void Chassis::precisionDriveSystem(Joystick *leftStick, Joystick *rightStick) {
-	robotDrive->TankDrive(leftStick->GetY() / 4, rightStick->GetY() / 4);
+	robotDrive->ArcadeDrive(rightStick->GetY() / 4, rightStick->GetX() / 4, true);
+	//robotDrive->TankDrive(leftStick->GetY() / 4, rightStick->GetY() / 4);
 }
 
 void Chassis::brake() {
