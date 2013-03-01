@@ -14,7 +14,7 @@ void Feeder::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void Feeder::FeedDisc() {
-	discFeeder->Set(1.0);
+	discFeeder->Set(-1.0);
 }
 
 void Feeder::StopFeed() {
