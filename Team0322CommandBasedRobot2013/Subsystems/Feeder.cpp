@@ -2,7 +2,7 @@
 #include "../Robotmap.h"
 
 Feeder::Feeder() : Subsystem("Feeder") {
-	discFeeder = new Victor(DIGITAL_MODULE_LEFT,3);
+	discFeeder = new Victor(DIGITAL_MODULE_LEFT, 5);
 }
     
 void Feeder::InitDefaultCommand() {
