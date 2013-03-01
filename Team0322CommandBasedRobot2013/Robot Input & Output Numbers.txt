@@ -22,6 +22,25 @@ Accelerometer Z = Analog,4
 I2C Accelerometer = I2C
 
 
+PNEUMATIC_CONTROL_SYSTEM
+Compressor = DigitalInput Left, 5; Relay, 1
+
+
+FEEDER
+discFeeder = PWM Left, 5
+
+
+SHOOTER
+frontWheelMotor = PWM Right, 3
+rearWheelMotor = PWM Right, 4
+discLoader = Relay, 2
+
+
+SHOOTER_TURRET
+leftTurretMotor = PWM Left, 3
+rightTurretMotor = PWM Left, 4
+
+
 AUTONOMUS_MODE_SWITCHES
 switch1 = DigitalInput Left,9
 switch2 = DigitalInput Left,10
