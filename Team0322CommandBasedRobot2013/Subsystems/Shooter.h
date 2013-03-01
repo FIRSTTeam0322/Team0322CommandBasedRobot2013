@@ -13,7 +13,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 	Victor *frontWheelMotor, *rearWheelMotor;
-	Solenoid *discLoader;
+	Solenoid *discLoaderFire, *discLoaderReset;
 public:
 	Shooter();
 	void InitDefaultCommand();

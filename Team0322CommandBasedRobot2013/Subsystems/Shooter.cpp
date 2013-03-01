@@ -2,9 +2,10 @@
 #include "../Robotmap.h"
 
 Shooter::Shooter() : Subsystem("Shooter") {
-	frontWheelMotor = new Victor(DIGITAL_MODULE_RIGHT,3); 
-	rearWheelMotor = new Victor(DIGITAL_MODULE_RIGHT,4);
-	discLoader = new Solenoid(RELAY_MODULE,2);
+	frontWheelMotor = new Victor(DIGITAL_MODULE_RIGHT, 3); 
+	rearWheelMotor = new Victor(DIGITAL_MODULE_RIGHT, 4);
+	discLoaderFire = new Solenoid(SOLENOID_MODULE, 1);
+	discLoaderReset = new Solenoid(SOLENOID_MODULE, 2);
 }
     
 void Shooter::InitDefaultCommand() {
@@ -17,11 +18,13 @@ void Shooter::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void Shooter::loadDisc() {
-	discLoader->Set(1);
+	discLoaderFire->Set(1);
+	discLoaderReset->Set(0);
 }
 
 void Shooter::resetLoader() {
-	discLoader->Set(0);
+	discLoaderFire->Set(0);
+	discLoaderReset->Set(1);
 }
 
 void Shooter::shootDisc() {

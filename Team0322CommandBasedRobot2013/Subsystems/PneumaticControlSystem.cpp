@@ -3,7 +3,7 @@
 #include "../Commands/StartCompressor.h"
 
 PneumaticControlSystem::PneumaticControlSystem() : Subsystem("PneumaticControlSystem") {
-	airSource = new Compressor(DIGITAL_MODULE_LEFT,5,RELAY_MODULE,1);
+	airSource = new Compressor(DIGITAL_MODULE_LEFT,5,DIGITAL_MODULE_LEFT,1);
 }
     
 void PneumaticControlSystem::InitDefaultCommand() {

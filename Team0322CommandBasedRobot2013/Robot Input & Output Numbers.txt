@@ -23,7 +23,7 @@ I2C Accelerometer = I2C
 
 
 PNEUMATIC_CONTROL_SYSTEM
-Compressor = DigitalInput Left, 5; Relay, 1
+Compressor = DigitalInput Left, 5; Relay Left, 1
 
 
 FEEDER
@@ -33,7 +33,8 @@ discFeeder = PWM Left, 5
 SHOOTER
 frontWheelMotor = PWM Right, 3
 rearWheelMotor = PWM Right, 4
-discLoader = Relay, 2
+discLoaderFire = Solenoid, 1
+discLoaderReset = Solenoid, 2
 
 
 SHOOTER_TURRET

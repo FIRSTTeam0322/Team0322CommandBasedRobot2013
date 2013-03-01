@@ -21,6 +21,6 @@
 #define ANALOG_MODULE 1
 #define DIGITAL_MODULE_LEFT 1
 #define DIGITAL_MODULE_RIGHT 2
-#define RELAY_MODULE 1
+#define SOLENOID_MODULE 1
 
 #endif
