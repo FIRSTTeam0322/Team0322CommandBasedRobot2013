@@ -23,7 +23,7 @@ bool LoadDisc::IsFinished() {
 
 // Called once after isFinished returns true
 void LoadDisc::End() {
-	shooter->resetLoader();
+	shooter->nullLoader();
 }
 
 // Called when another command which requires one or more of the same

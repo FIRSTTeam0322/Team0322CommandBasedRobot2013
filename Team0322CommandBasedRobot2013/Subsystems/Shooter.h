@@ -19,6 +19,7 @@ public:
 	void InitDefaultCommand();
 	void loadDisc();
 	void shootDisc();
+	void nullLoader();
 	void resetLoader();
 	void stopShooter();
 	void reverseShooter();

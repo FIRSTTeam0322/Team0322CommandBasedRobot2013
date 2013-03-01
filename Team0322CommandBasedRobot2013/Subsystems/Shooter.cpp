@@ -19,12 +19,15 @@ void Shooter::InitDefaultCommand() {
 
 void Shooter::loadDisc() {
 	discLoaderFire->Set(1);
-	discLoaderReset->Set(0);
 }
 
 void Shooter::resetLoader() {
-	discLoaderFire->Set(0);
 	discLoaderReset->Set(1);
+}
+
+void Shooter::nullLoader() {
+	discLoaderFire->Set(0);
+	discLoaderReset->Set(0);
 }
 
 void Shooter::shootDisc() {
