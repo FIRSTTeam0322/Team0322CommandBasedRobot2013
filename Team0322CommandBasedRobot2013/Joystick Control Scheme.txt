@@ -6,8 +6,14 @@ Brake Control = Button 1 (Trigger)
 DRIVE_STICK_RIGHT
 Right Side Drive = Y Axis
 
-Precision Drive System = [While Holding Button 1(Trigger)] Both Drive Sticks
+Precision Drive System = [While Holding Button 1(Trigger)] DRIVE_STICK_RIGHT (Arcade Style)
 
 
 MANIPULATOR_STICK
 
+Move Turret = Left Stick Y Axis
+
+Feed Disc = Button 1
+Load Disc = Button 2
+Shoot Disc = Button 3
+Reverse Shooter = Button 4
