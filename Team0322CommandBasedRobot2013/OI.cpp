@@ -3,6 +3,7 @@
 #include "Commands/PrecisionDrive.h"
 #include "Commands/LoadDisc.h"
 #include "Commands/ShootDisc.h"
+#include "Commands/ResetDiscLoader.h"
 #include "Commands/ReverseShooter.h"
 #include "Commands/FeedDisc.h"
 
@@ -28,7 +29,8 @@ OI::OI() {
 	
 	// Create the Shooter SubSystem controls
 	discLoader = new JoystickButton(manipulatorStick, 2);
-	discLoader->WhileHeld(new LoadDisc());
+	discLoader->WhenPressed(new LoadDisc());
+	discLoader->WhenReleased(new ResetDiscLoader());
 	
 	discShooter = new JoystickButton(manipulatorStick, 3);
 	discShooter->WhileHeld(new ShootDisc());
