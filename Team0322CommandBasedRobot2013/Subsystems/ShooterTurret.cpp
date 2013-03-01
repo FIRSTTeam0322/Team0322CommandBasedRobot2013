@@ -18,6 +18,6 @@ void ShooterTurret::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void ShooterTurret::spinTurret(Joystick *manipulatorStick) {
-	leftTurretMotor->Set(manipulatorStick->GetRawAxis(1));
-	rightTurretMotor->Set(-(manipulatorStick->GetRawAxis(1)));
+	leftTurretMotor->Set(manipulatorStick->GetY());
+	rightTurretMotor->Set(-(manipulatorStick->GetY()));
 }
