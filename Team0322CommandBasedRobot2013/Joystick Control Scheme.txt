@@ -16,4 +16,4 @@ Move Turret = Left Stick Y Axis
 Feed Disc = Button 1
 Load Disc = Button 2
 Shoot Disc = Button 3
-Reverse Shooter = Button 4
+Stop/Reverse Shooter = Button 4
