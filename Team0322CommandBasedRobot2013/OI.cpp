@@ -19,7 +19,7 @@ OI::OI() {
 	brake = new JoystickButton(driveStickLeft, 1);
 	brake->WhileHeld(new BrakeControl());
 	
-	// Create the Precision Drive SubSystem controls
+	// Create the Drive System controls	
 	precisionDriveButton = new JoystickButton(driveStickRight, 1);
 	precisionDriveButton->WhileHeld(new PrecisionDrive());
 	
