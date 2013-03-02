@@ -1,6 +1,8 @@
 DRIVE_STICK_LEFT
 Left Side Drive = Y Axis
 
+(ArcadeDrive System = X-Axis & Y-Axis)
+
 Brake Control = Button 1 (Trigger)
 
 DRIVE_STICK_RIGHT
