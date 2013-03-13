@@ -44,3 +44,9 @@ void Shooter::reverseShooter() {
 	frontWheelMotor->Set(1.0);
 	rearWheelMotor->Set(1.0);
 }
+
+bool Shooter::getShooterState() {
+	if((frontWheelMotor->Get() != 0) || (rearWheelMotor->Get() != 0));
+		return false;
+	return true;
+}

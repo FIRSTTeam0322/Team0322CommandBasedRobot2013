@@ -23,6 +23,7 @@ public:
 	void resetLoader();
 	void stopShooter();
 	void reverseShooter();
+	bool getShooterState();
 };
 
 #endif
