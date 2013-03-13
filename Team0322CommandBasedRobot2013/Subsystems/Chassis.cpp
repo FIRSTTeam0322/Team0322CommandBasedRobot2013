@@ -59,3 +59,27 @@ void Chassis::coast() {
 	leftRearBrake->Set(0);
 	rightRearBrake->Set(0);
 }
+
+float Chassis::getSpeedControllerOutput(int selection) {
+	switch(selection) {
+		case 1:
+			return(frontLeftMotor->Get());
+			break;
+		
+		case 2:
+			return(frontRightMotor->Get());
+			break;
+		
+		case 3:
+			return(rearLeftMotor->Get());
+			break;
+		
+		case 4:
+			return(rearRightMotor->Get());
+			break;
+		
+		default:
+			return(0.0);
+			return;
+	}
+}

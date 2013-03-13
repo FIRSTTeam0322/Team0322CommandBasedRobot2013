@@ -23,6 +23,7 @@ public:
 	void precisionDriveSystem(Joystick *leftStick, Joystick *rightStick);
 	void brake();
 	void coast();
+	float getSpeedControllerOutput(int);
 };
 
 #endif
