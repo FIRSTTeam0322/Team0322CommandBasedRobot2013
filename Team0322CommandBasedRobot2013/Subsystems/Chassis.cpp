@@ -80,6 +80,5 @@ float Chassis::getSpeedControllerOutput(int selection) {
 		
 		default:
 			return(0.0);
-			return;
 	}
 }
