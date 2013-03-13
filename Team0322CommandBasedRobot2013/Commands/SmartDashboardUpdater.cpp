@@ -4,9 +4,9 @@
 SmartDashboardUpdater::SmartDashboardUpdater() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
-	Requires(chassis);
-	Requires(chassisSensors);
-	Requires(shooter);
+	//Requires(chassis);
+	//Requires(chassisSensors);
+	//Requires(shooter);
 }
 
 // Called just before this Command runs the first time
